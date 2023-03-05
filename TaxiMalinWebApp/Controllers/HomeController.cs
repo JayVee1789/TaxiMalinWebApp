@@ -47,8 +47,8 @@ namespace TaxiMalinWebApp.Controllers
 
             if (ModelState.IsValid)
             {
-                formulaireModel.Id = Guid.NewGuid();
-                _context.Add(formulaireModel);
+                //formulaireModel.Id = Guid.NewGuid();
+                //_context.Add(formulaireModel);
 
                 var email = new MimeMessage();
                 ////email.From.Add(MailboxAddress.Parse(formulaireModel.Email));
@@ -75,15 +75,15 @@ namespace TaxiMalinWebApp.Controllers
             }
             return RedirectToAction("Index");
         }
-        public MimeMessage CreerCourrielReservation(string? nom, DateTime? date, DateTime? temps, string? telephone,string? email, string? pointDeDepart, string? Destination, int? nbrepassager)
-        {
-            var mess = new MimeMessage();
-            mess.From.Add(MailboxAddress.Parse("j.veret@hotmail.fr"));
-            mess.To.Add(MailboxAddress.Parse("mfshack0@gmail.com"));
-            mess.Subject = String.Format("Reservation");
-            mess.Body = new TextPart(TextFormat.Plain) { Text = String.Format("reservation recu de {0} pour le {1} a {2}, \n a venir chercher a {3} et a emmener a {4} pour {5} personnes, a confirmer avec aux {6} ou par courriel aux {}", nom, date, temps, pointDeDepart,Destination, nbrepassager, telephone, email) };
-            return mess;
-        }
+        //public MimeMessage CreerCourrielReservation(string? nom, DateTime? date, DateTime? temps, string? telephone,string? email, string? pointDeDepart, string? Destination, int? nbrepassager)
+        //{
+        //    var mess = new MimeMessage();
+        //    mess.From.Add(MailboxAddress.Parse("j.veret@hotmail.fr"));
+        //    mess.To.Add(MailboxAddress.Parse("mfshack0@gmail.com"));
+        //    mess.Subject = String.Format("Reservation");
+        //    mess.Body = new TextPart(TextFormat.Plain) { Text = String.Format("reservation recu de {0} pour le {1} a {2}, \n a venir chercher a {3} et a emmener a {4} pour {5} personnes, a confirmer avec aux {6} ou par courriel aux {}", nom, date, temps, pointDeDepart,Destination, nbrepassager, telephone, email) };
+        //    return mess;
+        //}
 
         public IActionResult ReserverCourse()
         {
@@ -93,12 +93,12 @@ namespace TaxiMalinWebApp.Controllers
 
         public async Task<IActionResult> Contact([Bind("Id,Nom,Email,NumeroTelephone,Sujet,Message")] ObjetPerduMessageModel Message )
         {
-            if (ModelState.IsValid)
-            {
-                Message.Id = Guid.NewGuid();
-                _context.Add(Message);
-                _context.SaveChanges();
-            }
+            //if (ModelState.IsValid)
+            //{
+            //    Message.Id = Guid.NewGuid();
+            //    _context.Add(Message);
+            //    _context.SaveChanges();
+            //}
                 return View();
         }
         public IActionResult ReservationAjouter()
