@@ -1,15 +1,19 @@
 ﻿
 @{
     ViewData["Title"] = "Reserver";
+
 }
+@model TaxiMalinWebApp.Models.Reservation
+<div>
+
+</div>
 <section class="inner-banner">
     <div class="container">
         <ul class="thm-breadcrumb">
-            <li><a href="index.html">Home</a></li>
-            <li><span class="sep">.</span></li>
-            <li><span class="page-title">Book a Ride</span></li>
+          
+            <li><span class="page-title">Reserver une course</span></li>
         </ul><!-- /.thm-breadcrumb -->
-        <h2>Book a Ride</h2>
+        <h2>Reserver une course</h2>
     </div><!-- /.container -->
 </section><!-- /.inner-banner -->
 <section class="book-ride-two">
@@ -18,59 +22,54 @@
             <div class="col-lg-8">
                 <div class="block-title">
                     <div class="dot-line"></div><!-- /.dot-line -->
-                    <p>Looking for a taxi</p>
-                    <h2>Make your booking</h2>
+                    <p>Besoin d'un taxi ou d'un chauffeur ?</p>
+                    <h2>Faites votre reservation</h2>
                 </div><!-- /.block-title -->
-                <form action="inc/sendemail.php" class="booking-form-two ">
-                    <p>There are many variations of passages of lorem ipsum available but the majority have suffered alteration in some form by injected humor or random word which don't look even slightly believ- <br>able you are going to use a passage.</p>
-                    <h3 class="form-block-title">Select Information</h3><!-- /.form-block-title -->
+                <form asp-controller="Home" asp-action="AddReservation" class="booking-form-two ">
+                    <p>Obtenez une reponse rapide par un de nos agents</p>
+                    <h3 class="form-block-title">Remplissez les informations</h3><!-- /.form-block-title -->
                     <div class="row">
                         <div class="col-lg-6">
                             <div class="input-holder">
-                                <input type="text" name="name" placeholder="Your name">
+                                <input asp-for="Name" type="text" name="name" placeholder="Votre nom">
                             </div><!-- /.input-holder -->
                         </div><!-- /.col-lg-6 -->
                         <div class="col-lg-6">
                             <div class="input-holder">
-                                <input type="text" name="name" placeholder="Email address">
+                                <input asp-for="Email" type="text" name="Email" placeholder="adresse courriel">
                             </div><!-- /.input-holder -->
                         </div><!-- /.col-lg-6 -->
                         <div class="col-lg-6">
                             <div class="input-holder">
-                                <input type="text" name="name" placeholder="Phone">
+                                <input asp-for="NumeroTelephone" type="text" name="NumeroTelephone" placeholder="Telephone">
                             </div><!-- /.input-holder -->
                         </div><!-- /.col-lg-6 -->
                         <div class="col-lg-6">
                             <div class="input-holder">
-                                <input type="text" name="name" placeholder="Passengers #">
+                                <input asp-for="NbrePassager" type="text" name="NbrePassager" placeholder="Passengers #">
                             </div><!-- /.input-holder -->
                         </div><!-- /.col-lg-6 -->
                         <div class="col-lg-6">
                             <div class="input-holder">
-                                <input type="text" name="name" placeholder="Pick up address">
+                                <input asp-for="AdresseDepart" type="text" name="AdresseDepart" placeholder="Adresse de depart">
                             </div><!-- /.input-holder -->
                         </div><!-- /.col-lg-6 -->
                         <div class="col-lg-6">
                             <div class="input-holder">
-                                <input type="text" name="name" placeholder="Drop off address">
+                                <input asp-for="AdresseDestination" type="text" name="AdresseDestination" placeholder="Adresse de livraison">
                             </div><!-- /.input-holder -->
                         </div><!-- /.col-lg-6 -->
                         <div class="col-lg-6">
                             <div class="input-holder">
-                                <input type="text" name="name" placeholder="Select date">
-                                <i class="conexi-icon-small-calendar"></i>
+                                <input class="form-control" asp-for="DateReservation" type="date" name="DateReservation" placeholder="Select date">
+                                <i class="fa fa-calendar"></i>
                             </div><!-- /.input-holder -->
                         </div><!-- /.col-lg-6 -->
                         <div class="col-lg-6">
                             <div class="input-holder">
-                                <select class="selectpicker">
-                                    <option>Select Time</option>
-                                    <option>10AM-10.59AM</option>
-                                    <option>12PM-12.59PM</option>
-                                    <option>1PM-1.59PM</option>
-                                    <option>2PM-2.59PM</option>
-                                </select>
-                                <i class="conexi-icon-clock"></i>
+                                <div class="input-holder">
+                                    <input class="form-control" asp-for="SelectTime" type="time" name="SelectTime" placeholder="Select date">
+                                    <i class="fa fa-clock"></i>
                             </div><!-- /.input-holder -->
                         </div><!-- /.col-lg-6 -->
                     </div><!-- /.row -->
@@ -79,11 +78,11 @@
                     <ul class="special-checkbox">
                         <li>
                             <span class="input-checker">
-                                <input type="checkbox" name="apt_vehicle_services_needed" value="">
-                            </span>By using this form you agree to our terms & conditions.
+                                    <input asp-for="AgreementIsChecked" type="checkbox" value="">
+                            </span>En cochant vous accepter nos termes et conditions.
                         </li>
                     </ul>
-                    <button type="submit" class="book-btn">Book Now</button>
+                    <button type="submit" class="book-btn">Reserver</button>
                 </form><!-- /.booking-form-two -->
             </div><!-- /.col-lg-8 -->
         </div><!-- /.row -->

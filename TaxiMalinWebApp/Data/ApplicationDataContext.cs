@@ -10,5 +10,6 @@ namespace TaxiMalinWebApp.Data
         }
 
         public DbSet<Reservation> reservations { get; set; }
+        public DbSet<ObjetPerduMessageModel> objetPerduMessages { get;set; }
     }
 }

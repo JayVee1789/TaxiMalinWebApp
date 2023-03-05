@@ -22,6 +22,32 @@ namespace TaxiMalinWebApp.Migrations
 
             SqlServerModelBuilderExtensions.UseIdentityColumns(modelBuilder, 1L, 1);
 
+            modelBuilder.Entity("TaxiMalinWebApp.Models.ObjetPerduMessageModel", b =>
+                {
+                    b.Property<Guid>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<string>("Email")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Message")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Nom")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("NumeroTelephone")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Sujet")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("objetPerduMessages");
+                });
+
             modelBuilder.Entity("TaxiMalinWebApp.Models.Reservation", b =>
                 {
                     b.Property<Guid>("Id")
@@ -29,28 +55,44 @@ namespace TaxiMalinWebApp.Migrations
                         .HasColumnType("uniqueidentifier");
 
                     b.Property<string>("AdresseDepart")
-                        .HasColumnType("nvarchar(max)");
+                        .IsRequired()
+                        .HasMaxLength(150)
+                        .HasColumnType("nvarchar(150)");
 
                     b.Property<string>("AdresseDestination")
-                        .HasColumnType("nvarchar(max)");
+                        .IsRequired()
+                        .HasMaxLength(150)
+                        .HasColumnType("nvarchar(150)");
+
+                    b.Property<bool>("AgreementIsChecked")
+                        .HasColumnType("bit");
 
                     b.Property<DateTime?>("DateReservation")
+                        .IsRequired()
                         .HasColumnType("datetime2");
 
                     b.Property<string>("Email")
-                        .HasColumnType("nvarchar(max)");
+                        .IsRequired()
+                        .HasMaxLength(75)
+                        .HasColumnType("nvarchar(75)");
 
                     b.Property<string>("Name")
-                        .HasColumnType("nvarchar(max)");
+                        .IsRequired()
+                        .HasMaxLength(75)
+                        .HasColumnType("nvarchar(75)");
 
-                    b.Property<int?>("NbrePassager")
-                        .HasColumnType("int");
+                    b.Property<string>("NbrePassager")
+                        .IsRequired()
+                        .HasMaxLength(1)
+                        .HasColumnType("nvarchar(1)");
 
-                    b.Property<int?>("NumeroTelephone")
-                        .HasColumnType("int");
+                    b.Property<string>("NumeroTelephone")
+                        .IsRequired()
+                        .HasMaxLength(75)
+                        .HasColumnType("nvarchar(75)");
 
-                    b.Property<string>("SelectTime")
-                        .HasColumnType("nvarchar(max)");
+                    b.Property<DateTime>("SelectTime")
+                        .HasColumnType("datetime2");
 
                     b.HasKey("Id");
 

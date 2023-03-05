@@ -11,7 +11,8 @@
                     <div class="col-lg-12 text-center">
                         <div class="banner-circle" style="background-image: url(images/slider/slider-2-1.jpg);">
                             <div class="inner-block">
-                                <h3>Voyagez <br> Malin <br> avec <br> Taxi Malin</h3>
+                               @* <h3>Taxi Radin  Taxi Malin</h3>*@
+                                <h3> Des prix futés <br>avec taxi <br>malin! </h3>
                                 <a href="#" class="banner-btn">En savoir + </a>
                             </div><!-- /.inner-block -->
                         </div><!-- /.banner-circle -->
@@ -25,7 +26,8 @@
                     <div class="col-lg-12 text-center">
                         <div class="banner-circle" style="background-image: url(images/slider/slider-2-2.jpg);">
                             <div class="inner-block">
-                                <h3>Voyagez <br> Malin <br> avec <br> Taxi Malin</h3>
+                                
+                                <h3> Des prix futés <br>avec taxi <br>malin! </h3>
                                 <a href="#" class="banner-btn">En savoir +</a>
                             </div><!-- /.inner-block -->
                         </div><!-- /.banner-circle -->
@@ -76,12 +78,17 @@
                         </div><!-- /.col-lg-6 -->
                         <div class="col-lg-6">
                             <div class="input-holder">
-                                <input asp-for="Email" type="text"  placeholder="Courriel">
+                                <input asp-for="Email" type="email"  placeholder="Courriel">
                             </div><!-- /.input-holder -->
                         </div><!-- /.col-lg-6 -->
                         <div class="col-lg-12">
                             <div class="input-holder">
-                                <input asp-for="NbrePassager" type="text"  placeholder="Passagers #">
+                                <input asp-for="NumeroTelephone" type="text" placeholder="Telephone">
+                            </div><!-- /.input-holder -->
+                        </div><!-- /.col-lg-6 -->
+                        <div class="col-lg-12">
+                            <div class="input-holder">
+                                <input asp-for="NbrePassager" type="text"  placeholder="Passagers #" min="1" max="3">
                             </div><!-- /.input-holder -->
                         </div><!-- /.col-lg-12 -->
                         <div class="col-lg-12">
@@ -96,22 +103,17 @@
                         </div><!-- /.col-lg-12 -->
                         <div class="col-lg-6">
                             <div class="input-holder">
-                                <input asp-for="DateReservation" type="date" name="name" placeholder="Selectionner une date">
-                                <i class="conexi-icon-small-calendar"></i>
+                                <input asp-for="DateReservation" type="date" placeholder="Selectionner une date">
+                                <i class="fa fa-calendar"></i>
                             </div><!-- /.input-holder -->
                         </div><!-- /.col-lg-6 -->
                         <div class="col-lg-6">
-                            <div class="input-holder">
-                                <select asp-for="SelectTime" class="selectpicker">
-                                    <option>Selectionner heure</option>
-                                    <option value="10">10am</option>
-                                    <option value="11">11am</option>
-                                    <option value="12">12am</option>
-                                    <option value="13">13am</option>
-                                </select>
-                                <i class="conexi-icon-clock"></i>
+                             <div class="input-holder">
+                                <input asp-for="SelectTime" type="time"  placeholder="Selectionner une date">
+                                <i class="fa fa-clock"></i>
                             </div><!-- /.input-holder -->
-                        </div><!-- /.col-lg-6 -->
+                                </div><!-- /.col-lg-6 -->
+                        
                         <div class="col-lg-12">
                             <div class="input-holder">
                                 <input type="submit">
@@ -164,7 +166,7 @@
                     </div><!-- /.image-block -->
                     <div class="text-block">
                         <h3><a href="#">Trajet Gare</a></h3>
-                        <p>Notre service de navette vous conduit confortablement vers toutes les gares grandes lignes en Essonne et sur Paris. Réservez dès maintenant pour un transport fiable et         </p><br /><br />
+                        <p>Notre service de navette vous conduit confortablement vers toutes les gares grandes lignes en Essonne et sur Paris. Réservez dès maintenant pour un transport fiable.</p><br /><br />
                         <a href="#" class="more-link">Read More</a>
                     </div><!-- /.text-block -->
                 </div><!-- /.single-offer-one -->
@@ -206,14 +208,10 @@
                     </div><!-- /.top-block -->
                     <ul class="features-list">
                         <li>
-                            <div class="name-line">Prise en charge:</div><!-- /.name-line -->
-                            <div class="price-line">$4.90</div><!-- /.price-line -->
+                           <div class="name-line">A partir de* :</div><!-- /.name-line -->
+                            <div class="price-line"><i class="fa-solid fa-euro-sign"></i>39</div><!-- /.price-line -->
                         </li>
-                        <li>
-                            <div class="name-line">Prix Fixe:</div><!-- /.name-line -->
-                            <div class="price-line">$45.00</div><!-- /.price-line -->
-                        </li>
-                       
+
                     </ul><!-- /.features-list -->
                     <div class="button-block">
                         <a href="#" class="fare-btn">Reserver</a>
@@ -233,13 +231,10 @@
                     </div><!-- /.top-block -->
                     <ul class="features-list">
                         <li>
-                            <div class="name-line">Prise en charge:</div><!-- /.name-line -->
-                            <div class="price-line">$4.90</div><!-- /.price-line -->
+                            <div class="name-line">A partir de* :</div><!-- /.name-line -->
+                            <div class="price-line"><i class="fa-solid fa-euro-sign"></i>89</div><!-- /.price-line -->
                         </li>
-                        <li>
-                            <div class="name-line">Prix Fixe:</div><!-- /.name-line -->
-                            <div class="price-line">$79.00</div><!-- /.price-line -->
-                        </li>
+                       
                     </ul><!-- /.features-list -->
                     <div class="button-block">
                         <a href="#" class="fare-btn">Reserver</a>
@@ -261,13 +256,10 @@
                     </div><!-- /.top-block -->
                     <ul class="features-list">
                         <li>
-                            <div class="name-line">Prise en charge:</div><!-- /.name-line -->
-                                <div class="price-line">$4.90</div><!-- /.price-line -->
-                            </li>
-                            <li>
-                                <div class="name-line">Prix Fixe:</div><!-- /.name-line -->
-                                <div class="price-line">$79.00</div><!-- /.price-line -->
-                            </li>
+                            <div class="name-line">A partir de* :</div><!-- /.name-line -->
+                            <div class="price-line"><i class="fa-solid fa-euro-sign"></i>99</div><!-- /.price-line -->
+                        </li>
+                           
                     </ul><!-- /.features-list -->
                     <div class="button-block">
                         <a href="#" class="fare-btn">Reserver</a>
@@ -287,13 +279,9 @@
                     </div><!-- /.top-block -->
                     <ul class="features-list">
                         <li>
-                            <div class="name-line">Prise en charge:</div><!-- /.name-line -->
-                                <div class="price-line">$4.90</div><!-- /.price-line -->
-                            </li>
-                            <li>
-                                <div class="name-line">Prix Fixe:</div><!-- /.name-line -->
-                                <div class="price-line">$110.00</div><!-- /.price-line -->
-                            </li>
+                            <div class="name-line">A partir de* :</div><!-- /.name-line -->
+                            <div class="price-line"><i class="fa-solid fa-euro-sign"></i>99</div><!-- /.price-line -->
+                        </li>
                     </ul><!-- /.features-list -->
                     <div class="button-block">
                         <a href="#" class="fare-btn">Reserver</a>
@@ -303,7 +291,7 @@
         </div>
     </div><!-- /.row -->
     <div class="block-text text-center">
-        <p>Nos prix peuvent sensiblement varié mais vous etes toujours prévénu avant la validation.</p>
+        <p>*Nos prix peuvent sensiblement varié mais vous etes toujours prévénu avant la validation ou contacter un de nos agents pour plus de details.</p>
     </div><!-- /.block-text -->
     </div><!-- /.container -->
 </section><!-- /.taxi-fare-one -->
@@ -478,9 +466,11 @@
         <div class="content-block">
             <p>recevez une confirmation sous 24h</p>
             <h3>Appeler ou réservez en ligne.</h3>
+
         </div><!-- /.content-block -->
         <div class="button-block">
             <a href="#" class="cta-btn">Reserver Maintenant</a>
         </div><!-- /.button-block -->
     </div><!-- /.container -->
 </section><!-- /.cta-style-two -->
+

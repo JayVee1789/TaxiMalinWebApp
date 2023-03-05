@@ -1,0 +1,70 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+@model TaxiMalinWebApp.Models.ObjetPerduMessageModel
+<section class="inner-banner">
+    <div class="container">
+        
+        <h2>Contact</h2>
+    </div><!-- /.container -->
+</section><!-- /.inner-banner -->
+<div class="contact-page-map-wrapper">
+    @*<div class="google-map" id="contact-google-map" data-map-lat="40.712784" data-map-lng="-74.005941" data-icon-path="images/resources/map-pin-1-1.png" data-map-title="Brooklyn, New York, United Kingdom" data-map-zoom="11" data-markers='{
+         "marker-1" : [40.712784, -74.005941, "<h4>Main Office</h4><p>Babylon Branch , Lindenhurst, UK</p>" ],
+         "marker-2" : [40.728157, -74.077642, "<h4>Branch Office</h4> <p>291 Park Ave S, East Meadow, UK</p>" ]
+         }'>
+    </div>
+    <div class="contact-info-block">
+        <p>86 Road Broklyn Street, 600 <br> New York, USA</p>
+        <ul class="contact-infos">
+            <li><i class="fa fa-envelope"></i> needhelp@conexi.com</li>
+            <li><i class="fa fa-phone-square"></i> 666 888 000</li>
+        </ul><!-- /.contact-infos -->
+    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2635.8215239163032!2d2.3024629512529553!3d48.65152942310164!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47e5d9aa05f5ab8f%3A0xe4b05dc02a0a1087!2s2%20All.%20Henri%20Matisse%2C%2091700%20Sainte-Genevi%C3%A8ve-des-Bois!5e0!3m2!1sfr!2sfr!4v1678052208970!5m2!1sfr!2sfr" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </div><!-- /.contact-info-block -->*@
+
+</div><!-- /.contact-page-map-wrapper -->
+<section class="contact-form-style-one">
+    <div class="container">
+        <div class="block-title text-center">
+            <div class="dot-line"></div><!-- /.dot-line -->
+            <p>Laisser un message</p>
+            <h2>Objet perdu</h2>
+        </div><!-- /.block-title -->
+        <form asp-controller="Home" asp-action="Contact" class="contact-form-one row" id="contact-form" method="post">
+            <div class="col-lg-6">
+                <div class="input-holder">
+                    <input asp-for="Nom" type="text" placeholder="Votre nom">
+                </div><!-- /.input-holder -->
+            </div><!-- /.col-lg-6 -->
+            <div class="col-lg-6">
+                <div class="input-holder">
+                    <input asp-for="Email" type="email" placeholder="Courriel">
+                </div><!-- /.input-holder -->
+            </div><!-- /.col-lg-6 -->
+            <div class="col-lg-6">
+                <div class="input-holder">
+                    <input asp-for="NumeroTelephone" type="text" placeholder="Telephone">
+                </div><!-- /.input-holder -->
+            </div><!-- /.col-lg-6 -->
+            <div class="col-lg-6">
+                <div class="input-holder">
+                    <input asp-for="Sujet" type="text" placeholder="Sujet:indiquer objet perdu">
+                </div><!-- /.input-holder -->
+            </div><!-- /.col-lg-6 -->
+            <div class="col-lg-12">
+                <div class="input-holder">
+                    <textarea asp-for="Message" class="form-control" name="form_message" placeholder="Ecrire votre message"></textarea>
+                </div><!-- /.input-holder -->
+            </div><!-- /.col-lg-6 -->
+            <div class="col-lg-12">
+                <div class="input-holder text-center">
+                    <input id="form_botcheck" name="form_botcheck" class="form-control" type="hidden" value="">
+                    <button class="theme-btn btn-style-two" type="submit" data-loading-text="Veuillez patienter..."><span>Envoyer message</span></button>
+                </div><!-- /.input-holder -->
+            </div><!-- /.col-lg-6 -->
+        </form><!-- /.contact-form-one -->
+    </div><!-- /.container -->
+</section><!-- /.contact-form-style-one -->

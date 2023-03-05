@@ -9,26 +9,26 @@
     <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
     <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
     <link rel="stylesheet" href="~/TaxiMalinWebApp.styles.css" asp-append-version="true" />
-    <link rel="apple-touch-icon" sizes="57x57" href="images/favicon//apple-icon-57x57.png"/>
-    <link rel="apple-touch-icon" sizes="60x60" href="images/favicon//apple-icon-60x60.png"/>
-    <link rel="apple-touch-icon" sizes="72x72" href="images/favicon//apple-icon-72x72.png"/>
-    <link rel="apple-touch-icon" sizes="76x76" href="images/favicon//apple-icon-76x76.png"/>
-    <link rel="apple-touch-icon" sizes="114x114" href="images/favicon//apple-icon-114x114.png"/>
-    <link rel="apple-touch-icon" sizes="120x120" href="images/favicon//apple-icon-120x120.png"/>
-    <link rel="apple-touch-icon" sizes="144x144" href="images/favicon//apple-icon-144x144.png"/>
-    <link rel="apple-touch-icon" sizes="152x152" href="images/favicon//apple-icon-152x152.png"/>
-    <link rel="apple-touch-icon" sizes="180x180" href="images/favicon//apple-icon-180x180.png"/>
-    <link rel="icon" type="image/png" sizes="192x192" href="images/favicon//android-icon-192x192.png"/>
-    <link rel="icon" type="image/png" sizes="32x32" href="images/favicon//favicon-32x32.png"/>
-    <link rel="icon" type="image/png" sizes="96x96" href="images/favicon//favicon-96x96.png"/>
-    <link rel="icon" type="image/png" sizes="16x16" href="images/favicon//favicon-16x16.png"/>
-    <link rel="manifest" href="images/favicon/manifest.json">
+    <link rel="apple-touch-icon" sizes="57x57" href="~/images/favicon//apple-icon-57x57.png" />
+    <link rel="apple-touch-icon" sizes="60x60" href="~/images/favicon//apple-icon-60x60.png" />
+    <link rel="apple-touch-icon" sizes="72x72" href="~/images/favicon//apple-icon-72x72.png" />
+    <link rel="apple-touch-icon" sizes="76x76" href="~/images/favicon//apple-icon-76x76.png" />
+    <link rel="apple-touch-icon" sizes="114x114" href="~/images/favicon//apple-icon-114x114.png" />
+    <link rel="apple-touch-icon" sizes="120x120" href="~/images/favicon//apple-icon-120x120.png" />
+    <link rel="apple-touch-icon" sizes="144x144" href="~/images/favicon//apple-icon-144x144.png" />
+    <link rel="apple-touch-icon" sizes="152x152" href="~/images/favicon//apple-icon-152x152.png" />
+    <link rel="apple-touch-icon" sizes="180x180" href="~/images/favicon//apple-icon-180x180.png" />
+    <link rel="icon" type="image/png" sizes="192x192" href="~/images/favicon//android-icon-192x192.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="~/images/favicon//favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="96x96" href="~/images/favicon//favicon-96x96.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="~/images/favicon//favicon-16x16.png" />
+    <link rel="manifest" href="~/images/favicon/manifest.json">
     <meta name="msapplication-TileColor" content="#ffffff">
     <meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
     <meta name="theme-color" content="#ffffff">
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/responsive.css">
-    <script src="https://kit.fontawesome.com/d82596a3e1.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="~/css/style.css" asp-append-version="true">
+    <link rel="stylesheet" href="~/css/responsive.css" asp-append-version="true">
+    <script src="https://kit.fontawesome.com/d82596a3e1.js" crossorigin="anonymous" asp-append-version="true"></script>
     <link href="font-awesome/css/all.css" rel="stylesheet" >
    
 </head>
@@ -38,8 +38,9 @@
             <div class="container">
                 <div class="inner-container">
                     <div class="logo-block">
-                        <a href="index.html"><img src="images/resources/taximalinGD.png" alt="Awesome Image" style="height:150px;width:162px" /></a>
-                    </div><!-- /.logo-block -->
+                        <a asp-controller="home" asp-action="index"><img src="~/images/resources/taximalinGD.png" alt="Awesome Image" style="height:150px;width:162px" /></a>
+                        </div><!-- /.logo-block -->
+
                     <div class="right-block">
                         <ul class="contact-infos">
                            @* <li><a href="#"><i class="fa fa-user-circle"></i> Customer Sign In</a></li>*@
@@ -69,31 +70,18 @@
                         <li class=" current ">
                             <a asp-controller="home" asp-action="index">Home</a>
                         </li>
-                        <li><a href="about.html">A propos de taxi malin</a></li>
-                        @*<li>
-                            <a href="#">Pages</a>
-                            <ul class="sub-menu">
-                                <li><a href="driver.html">Our Drivers</a></li>
-                                <li><a href="taxi.html">Our Taxi</a></li>
-                                <li><a href="single-taxi.html">Taxi Details</a></li>
-                            </ul><!-- /.sub-menu -->
-                        </li>*@
+                        @*<li><a href="about.html">A propos de taxi malin</a></li>*@
+                       
                         <li><a asp-controller="home" asp-action="ReserverCourse">Reserver une course</a></li>
-                        @*<li>
-                            <a href="blog.html">Blog</a>
-                            <ul class="sub-menu">
-                                <li><a href="blog.html">Blog Grid</a></li>
-                                <li><a href="blog-details.html">Blog Details</a></li>
-                            </ul><!-- /.sub-menu -->
-                        </li>*@
-                        <li><a asp-controller="home" asp-action="Privacy">Contact</a></li>
+                        
+                        <li><a asp-controller="home" asp-action="Contact">Contact</a></li>
                     </ul>
                 </div><!-- /.navbar-collapse -->
                 <div class="right-side-box">
                     <a href="callto:06-13-54-27-24" class="contact-btn-block">
                         <span class="icon-block">
 
-                            <i class="fa-regular fa-square-phone-flip"></i>
+                            <i class="fa fa-phone-square"></i>
                         </span>
                         <span class="text-block">
                             06-13-54-27-24
@@ -111,6 +99,7 @@
     </div>
 
     <footer class="site-footer ">
+        <a href="#" data-target="html" class="scroll-to-target scroll-to-top"><i class="fa fa-angle-up"></i></a>
         <img src="images/background/daniel-monteiro-47VpDiZzzEQ-unsplash.jpg" style="width:657px;height:663px" class="footer-bg" alt="Awesome Image" />
         <div class="upper-footer">
             <div class="container">
@@ -160,7 +149,7 @@
                             <div class="widget-title">
                                 <h3>Newsletter</h3>
                             </div><!-- /.widget-title -->
-                            <p>Sign up now for our mailing list to get all latest news <br> and updates from conexi company.</p>
+                            <p>Inscrivez vous à notre newsletter pour recevoir <br>  les dernieres offres de taxi malin.</p>
                             <form action="#" class="subscribe-form">
                                 <input type="text" name="email" placeholder="Enter your email">
                                 <button type="submit">Go</button>
@@ -174,7 +163,7 @@
             <div class="container">
                 <div class="inner-container">
                     <div class="left-block">
-                        <a href="index.html" class="footer-logo"><img src="images/resources/taximalinGD.png" style="height:150px;width:162px" alt="Awesome Image" /></a>
+                        <a href="index.html" class="footer-logo"><img src="~/images/resources/taximalinGD.png" style="height:150px;width:162px" alt="Awesome Image" /></a>
                         <span>&copy; 2023 <a href="#">InsolenceAgency.com</a></span>
                     </div><!-- /.left-block -->
                     <div class="right-block">
@@ -191,16 +180,17 @@
     <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
     <script src="~/js/site.js" asp-append-version="true"></script>
     
-    <script src="js/jquery.js"></script>
-    <script src="js/bootstrap.bundle.min.js"></script>
-    <script src="js/owl.carousel.min.js"></script>
-    <script src="js/bootstrap-select.min.js"></script>
-    <script src="js/jquery.magnific-popup.min.js"></script>
-    <script src="js/waypoints.min.js"></script>
-    <script src="js/jquery.counterup.min.js"></script>
-    <script src="js/jquery.bxslider.min.js"></script>
-    <script src="js/theme.js"></script>
-
+    <script src="~/js/jquery.js" asp-append-version="true"></script>
+    <script src="~/js/bootstrap.bundle.min.js" asp-append-version="true"></script>
+    <script src="~/js/owl.carousel.min.js" asp-append-version="true"></script>
+    <script src="~/js/bootstrap-select.min.js" asp-append-version="true"></script>
+    <script src="~/js/jquery.magnific-popup.min.js" asp-append-version="true"></script>
+    <script src="~/js/waypoints.min.js" asp-append-version="true"></script>
+    <script src="~/js/jquery.counterup.min.js" asp-append-version="true"></script>
+    <script src="~/js/jquery.bxslider.min.js" asp-append-version="true"></script>
+    <script src="~/js/theme.js" asp-append-version="true"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAuYIB-zZOGZWLcNjDG3_AjwNTUQiQ0RO0&callback=initMap" asp-append-version="true"></script>
+    <script src="~/js/map-helper.js" asp-append-version="true"></script>
     @await RenderSectionAsync("Scripts", required: false)
 </body>
 </html>
