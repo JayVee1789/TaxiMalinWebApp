@@ -42,6 +42,7 @@ namespace TaxiMalinWebApp.Controllers
         }
 
         [HttpPost]
+        [ValidateAntiForgeryToken]
         public async Task<IActionResult> AddReservation([Bind("Id,Name,Email,NumeroTelephone,NbrePassager,AdresseDepart,AdresseDestination,DateReservation,SelectTime")] Reservation formulaireModel)
         {
 
@@ -49,28 +50,20 @@ namespace TaxiMalinWebApp.Controllers
             {
                 //formulaireModel.Id = Guid.NewGuid();
                 //_context.Add(formulaireModel);
-
+                //creation email
                 var email = new MimeMessage();
-                ////email.From.Add(MailboxAddress.Parse(formulaireModel.Email));
                 email.From.Add(MailboxAddress.Parse("j.veret@hotmail.fr"));
                 email.To.Add(MailboxAddress.Parse("mfshack0@gmail.com"));
-                ////email.Subject = String.Format("une course de {0} à {1} a la date suivante : {2} confimer avec la personne à {3}", formulaireModel.AdresseDepart, formulaireModel.AdresseDestination, formulaireModel.DateReservation, formulaireModel.SelectTime);
                 email.Subject = String.Format("Reservation");
-                //// email.Body = new TextPart(TextFormat.Plain) { Text = String.Format("une course de {0} à {1} a la date suivante : {2} confimer avec la personne à {3}", formulaireModel.AdresseDepart, formulaireModel.AdresseDestination, formulaireModel.DateReservation, formulaireModel.SelectTime) };
-                //email.Body = new TextPart(TextFormat.Plain) { Text = String.Format("reservation recu de {0} pour le {1} a {2} confirmer avec aux {3}",formulaireModel.Name,formulaireModel.DateReservation,formulaireModel.SelectTime,formulaireModel.NumeroTelephone) };
+                email.Body = new TextPart(TextFormat.Plain) { Text = String.Format("reservation recu de {0} pour le {1} a {2},  a venir chercher a {3} et a emmener a {4} pour {5} personnes, a confirmer avec aux {6} ou par courriel aux {7}", formulaireModel.Name, formulaireModel.DateReservation, formulaireModel.SelectTime, formulaireModel.AdresseDepart, formulaireModel.AdresseDestination, formulaireModel.NbrePassager.ToString(), formulaireModel.NumeroTelephone, formulaireModel.Email) };
                 // send email
                 using var smtp = new SmtpClient();
-                //smtp.Host = "";
-                //smtp.Port = "";
-                //smtp.Credentials = "";
-                email.Body = new TextPart(TextFormat.Plain) { Text = String.Format("reservation recu de {0} pour le {1} a {2},  a venir chercher a {3} et a emmener a {4} pour {5} personnes, a confirmer avec aux {6} ou par courriel aux {7}", formulaireModel.Name, formulaireModel.DateReservation, formulaireModel.SelectTime, formulaireModel.AdresseDepart, formulaireModel.AdresseDestination, formulaireModel.NbrePassager.ToString(), formulaireModel.NumeroTelephone, formulaireModel.Email) };
-
-                //var email = CreerCourrielReservation(formulaireModel.Name, formulaireModel.DateReservation, formulaireModel.SelectTime, formulaireModel.AdresseDepart,  formulaireModel.AdresseDestination,formulaireModel.NbrePassager, formulaireModel.NumeroTelephone, formulaireModel.Email    );
                 smtp.Connect("smtp.sendgrid.net", 587, SecureSocketOptions.StartTls);
                 smtp.Authenticate("apikey", "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");
                 smtp.Send(email);
                 smtp.Disconnect(true);
-               
+
+                //_context.SaveChanges();
                 return RedirectToAction("ReservationAjouter");
             }
             return RedirectToAction("Index");
@@ -102,6 +95,15 @@ namespace TaxiMalinWebApp.Controllers
                 return View();
         }
         public IActionResult ReservationAjouter()
+        {
+            return View();
+        }
+
+        public IActionResult MentionsLegales()
+        {
+            return View();
+        }
+        public IActionResult PolitiquesConfidentialites()
         {
             return View();
         }

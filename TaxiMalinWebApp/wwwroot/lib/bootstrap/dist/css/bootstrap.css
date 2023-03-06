@@ -363,7 +363,8 @@ select:disabled {
 }
 
 [list]::-webkit-calendar-picker-indicator {
-  display: none;
+    display: none;
+   
 }
 
 button,

@@ -4,6 +4,7 @@
 @{
 }
 @model TaxiMalinWebApp.Models.ObjetPerduMessageModel
+
 <section class="inner-banner">
     <div class="container">
         
@@ -11,21 +12,20 @@
     </div><!-- /.container -->
 </section><!-- /.inner-banner -->
 <div class="contact-page-map-wrapper">
-    @*<div class="google-map" id="contact-google-map" data-map-lat="40.712784" data-map-lng="-74.005941" data-icon-path="images/resources/map-pin-1-1.png" data-map-title="Brooklyn, New York, United Kingdom" data-map-zoom="11" data-markers='{
-         "marker-1" : [40.712784, -74.005941, "<h4>Main Office</h4><p>Babylon Branch , Lindenhurst, UK</p>" ],
+    <div class="google-map" id="contact-google-map" data-map-lat="40.712784" data-map-lng="-74.005941" data-icon-path="~/images/resources/map-pin-1-1.png" data-map-title="rue henri matisse , Sainte Genevieve des Bois, 91700" data-map-zoom="11" data-markers='{
+         "marker-1" : [40.712784, -74.005941, "<h4>Main Office</h4><p>rue henri matisse , Sainte Genevieve des Bois, 91700</p>" ],
          "marker-2" : [40.728157, -74.077642, "<h4>Branch Office</h4> <p>291 Park Ave S, East Meadow, UK</p>" ]
          }'>
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2635.8365949745566!2d2.3017282512529524!3d48.65124112312207!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47e5d9aa1f58a639%3A0xaee430656d253b5a!2s8%20All.%20Henri%20Matisse%2C%2091700%20Sainte-Genevi%C3%A8ve-des-Bois!5e0!3m2!1sfr!2sfr!4v1678076882109!5m2!1sfr!2sfr" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
     </div>
     <div class="contact-info-block">
-        <p>86 Road Broklyn Street, 600 <br> New York, USA</p>
+        <p>8 rue henri matisse <br> Sainte Genevieve des Bois, 91700</p>
         <ul class="contact-infos">
-            <li><i class="fa fa-envelope"></i> needhelp@conexi.com</li>
-            <li><i class="fa fa-phone-square"></i> 666 888 000</li>
+            <li><i class="fa fa-envelope"></i> taximalin@gmail.com</li>
+            <li><i class="fa fa-phone-square"></i> 06 13 54 27 24</li>
         </ul><!-- /.contact-infos -->
-    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2635.8215239163032!2d2.3024629512529553!3d48.65152942310164!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47e5d9aa05f5ab8f%3A0xe4b05dc02a0a1087!2s2%20All.%20Henri%20Matisse%2C%2091700%20Sainte-Genevi%C3%A8ve-des-Bois!5e0!3m2!1sfr!2sfr!4v1678052208970!5m2!1sfr!2sfr" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-    </div><!-- /.contact-info-block -->*@
-
-</div><!-- /.contact-page-map-wrapper -->
+    </div><!-- /.contact-info-block -->
+ </div><!-- /.contact-page-map-wrapper -->
 <section class="contact-form-style-one">
     <div class="container">
         <div class="block-title text-center">
@@ -68,3 +68,5 @@
         </form><!-- /.contact-form-one -->
     </div><!-- /.container -->
 </section><!-- /.contact-form-style-one -->
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAuYIB-zZOGZWLcNjDG3_AjwNTUQiQ0RO0" asp-append-version="true"></script>
+<script src="~/js/map-helper.js" asp-append-version="true"></script>

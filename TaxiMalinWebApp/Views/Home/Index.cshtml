@@ -69,7 +69,8 @@
                     <p class="light-2">Rechercher une course?</p>
                     <h2 class="light">Reserver <br> maintenant</h2>
                 </div><!-- /.block-title -->
-                <form asp-controller="Home" asp-action="AddReservation" method="post" class="booking-form-one">
+                <form asp-controller="Home" asp-action="AddReservation" method="post" class="booking-form-one" asp-antiforgery="true">
+                    <div asp-validation-summary="All" class="text-white bg-danger"></div>
                     <div class="row">
                         <div class="col-lg-6">
                             <div class="input-holder">
@@ -79,6 +80,7 @@
                         <div class="col-lg-6">
                             <div class="input-holder">
                                 <input asp-for="Email" type="email"  placeholder="Courriel">
+                                <span asp-validation-for="Email" class="text-danger"></span>
                             </div><!-- /.input-holder -->
                         </div><!-- /.col-lg-6 -->
                         <div class="col-lg-12">
@@ -89,6 +91,7 @@
                         <div class="col-lg-12">
                             <div class="input-holder">
                                 <input asp-for="NbrePassager" type="text"  placeholder="Passagers 1-3 max" min="1" max="3">
+                                <span asp-validation-for="Email" class="text-danger"></span>
                             </div><!-- /.input-holder -->
                         </div><!-- /.col-lg-12 -->
                         <div class="col-lg-12">

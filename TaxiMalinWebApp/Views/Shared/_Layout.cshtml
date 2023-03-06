@@ -44,12 +44,11 @@
                     <div class="right-block">
                         <ul class="contact-infos">
                            @* <li><a href="#"><i class="fa fa-user-circle"></i> Customer Sign In</a></li>*@
-                            <li><a href="#"><i class="fa fa-envelope"></i> taximalin@gmail.com</a></li>
+                            <li><a href="mailto:taximalin@gmail.com"><i class="fa fa-envelope"></i> taximalin@gmail.com</a></li>
                             <li class="social-block">
-                                <a href="#"><i class="fa fa-twitter"></i></a>
-                                <a href="#"><i class="fa fa-facebook-f"></i></a>
-                                <a href="#"><i class="fa fa-youtube-play"></i></a>
-                                <a href="#"><i class="fa fa-google-plus"></i></a>
+                                <a href="#"><i class="fa fa-instagram"></i></a>
+                                <a href="#"><i class="fa fa-facebook"></i></a>
+                               @* <a href="#"><i class="fa fa-tiktok"></i></a>*@
                             </li>
                         </ul><!-- /.contact-infos -->
                     </div><!-- /.right-block -->
@@ -78,7 +77,7 @@
                     </ul>
                 </div><!-- /.navbar-collapse -->
                 <div class="right-side-box">
-                    <a href="callto:06-13-54-27-24" class="contact-btn-block">
+                    <a href="callto:+330613542724" class="contact-btn-block">
                         <span class="icon-block">
 
                             <i class="fa fa-phone-square"></i>
@@ -100,7 +99,7 @@
 
     <footer class="site-footer ">
         <a href="#" data-target="html" class="scroll-to-target scroll-to-top"><i class="fa fa-angle-up"></i></a>
-        <img src="images/background/daniel-monteiro-47VpDiZzzEQ-unsplash.jpg" style="width:657px;height:663px" class="footer-bg" alt="Awesome Image" />
+        <img src="~/images/background/daniel-monteiro-47VpDiZzzEQ-unsplash.jpg" style="width:657px;height:663px" class="footer-bg" alt="Awesome Image" />
         <div class="upper-footer">
             <div class="container">
                 <div class="row">
@@ -111,10 +110,8 @@
                             </div><!-- /.widget-title -->
                             <p>Course fixe, tarif fixe, taxi malin</p>
                             <div class="social-block">
-                                <a href="#"><i class="fa fa-twitter"></i></a>
-                                <a href="#"><i class="fa fa-facebook-f"></i></a>
-                                <a href="#"><i class="fa fa-youtube-play"></i></a>
-                                <a href="#"><i class="fa fa-google-plus"></i></a>
+                                <a href="#"><i class="fa fa-instagram"></i></a>
+                                <a href="#"><i class="fa fa-facebook"></i></a>
                             </div><!-- /.social-block -->
                         </div><!-- /.footer-widget about-widget -->
                     </div><!-- /.col-lg-3 -->
@@ -124,11 +121,10 @@
                                 <h3>Liens</h3>
                             </div><!-- /.widget-title -->
                             <ul class="link-lists">
-                                <li><a href="#">A propos</a></li>
-                                <li><a href="#">Reserver un taxi</a></li>
-                                <li><a href="#">L'avis des utilisateurs</a></li>
-                                <li><a href="#">Derniere Nouvelles</a></li>
-                                <li><a href="#">Contact</a></li>
+                                <li><a asp-controller="home" asp-action="index">A propos</a></li>
+                                <li><a asp-controller="home" asp-action="ReserverCourse">Reserver un taxi</a></li>
+                                
+                                <li><a asp-controller="home" asp-action="Contact">Contact</a></li>
                             </ul>
                         </div><!-- /.footer-widget -->
                     </div><!-- /.col-lg-2 -->
@@ -137,10 +133,10 @@
                             <div class="widget-title">
                                 <h3>Contact</h3>
                             </div><!-- /.widget-title -->
-                            <p>2 allee Henri Matisse <br> Sainte Genevieve des bois, 91700</p>
+                            <p>8 allee Henri Matisse <br> Sainte Genevieve des bois, 91700</p>
                             <ul class="contact-infos">
-                                <li><i class="fa fa-envelope"></i> taximalin@gmail.com</li>
-                                <li><i class="fa fa-phone-square"></i> 06-13-54-27-24</li>
+                                <li><a href="mailto:taximalin@gmail.com"><i class="fa fa-envelope"></i> taximalin@gmail.coma</a></li>
+                                <li><a href="callto:+3310613542724"><i class="fa fa-phone-square"></i> 06-13-54-27-24</a></li>
                             </ul><!-- /.contact-infos -->
                         </div><!-- /.footer-widget -->
                     </div><!-- /.col-lg-3 -->
@@ -168,18 +164,17 @@
                     </div><!-- /.left-block -->
                     <div class="right-block">
                         <ul class="link-lists">
-                            <li><a href="#">Mentions Legales</a></li>
-                            <li><a href="#">Utilisations des données</a></li>
+                            <li><a asp-controller="home" asp-action="MentionsLegales">Mentions Legales</a></li>
+                           
                         </ul>
                     </div><!-- /.right-block -->
                 </div><!-- /.inner-container -->
             </div><!-- /.container -->
         </div><!-- /.bottom-footer -->
     </footer><!-- /.site-footer -->
-    <script src="~/lib/jquery/dist/jquery.min.js"></script>
-    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/lib/jquery/dist/jquery.min.js" asp-append-version="true"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js" asp-append-version="true"></script>
     <script src="~/js/site.js" asp-append-version="true"></script>
-    
     <script src="~/js/jquery.js" asp-append-version="true"></script>
     <script src="~/js/bootstrap.bundle.min.js" asp-append-version="true"></script>
     <script src="~/js/owl.carousel.min.js" asp-append-version="true"></script>
@@ -189,8 +184,7 @@
     <script src="~/js/jquery.counterup.min.js" asp-append-version="true"></script>
     <script src="~/js/jquery.bxslider.min.js" asp-append-version="true"></script>
     <script src="~/js/theme.js" asp-append-version="true"></script>
-    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAuYIB-zZOGZWLcNjDG3_AjwNTUQiQ0RO0&callback=initMap" asp-append-version="true"></script>
-    <script src="~/js/map-helper.js" asp-append-version="true"></script>
+    
     @await RenderSectionAsync("Scripts", required: false)
 </body>
 </html>
