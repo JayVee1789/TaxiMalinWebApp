@@ -107,5 +107,17 @@ namespace TaxiMalinWebApp.Controllers
         {
             return View();
         }
+        public IActionResult Apropos()
+        {
+            return View();
+        }
+        public IActionResult Faq()
+        {
+            return View();
+        }
+        public IActionResult Services()
+        {
+            return View();
+        }
     }
 }
