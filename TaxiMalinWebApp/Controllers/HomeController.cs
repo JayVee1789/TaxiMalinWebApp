@@ -43,7 +43,7 @@ namespace TaxiMalinWebApp.Controllers
 
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> AddReservation([Bind("Id,Name,Email,NumeroTelephone,NbrePassager,AdresseDepart,AdresseDestination,DateReservation,SelectTime")] Reservation formulaireModel)
+        public async Task<IActionResult> AddReservation([Bind("Id,Name,Email,NumeroTelephone,NbrePassager,AdresseDepart,AdresseDestination,DateReservation,SelectTime,AgreementIsChecked")] Reservation formulaireModel)
         {
 
             if (ModelState.IsValid)
@@ -64,7 +64,7 @@ namespace TaxiMalinWebApp.Controllers
                 smtp.Disconnect(true);
 
                 //_context.SaveChanges();
-                return RedirectToAction("ReservationAjouter");
+                return  RedirectToAction("ReservationAjouter");
             }
             return RedirectToAction("Index");
         }
@@ -84,15 +84,20 @@ namespace TaxiMalinWebApp.Controllers
             return View();
         }
 
-        public async Task<IActionResult> Contact([Bind("Id,Nom,Email,NumeroTelephone,Sujet,Message")] ObjetPerduMessageModel Message )
+        //public async Task<IActionResult> Contact([Bind("Id,Nom,Email,NumeroTelephone,Sujet,Message")] ObjetPerduMessageModel ObjetPerdu)
+        //{
+        //    //if (ModelState.IsValid)
+        //    //{
+        //    //    Message.Id = Guid.NewGuid();
+        //    //    _context.Add(Message);
+        //    //    _context.SaveChanges();
+        //    //}
+        //    return View();
+        //}
+        public IActionResult Contact()
         {
-            //if (ModelState.IsValid)
-            //{
-            //    Message.Id = Guid.NewGuid();
-            //    _context.Add(Message);
-            //    _context.SaveChanges();
-            //}
-                return View();
+            
+            return View();
         }
         public IActionResult ReservationAjouter()
         {

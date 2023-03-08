@@ -18,6 +18,6 @@ namespace TaxiMalinWebApp.ViewModels
 
         public DateTime? DateReservation { get; set; }
 
-        public HeurePourForm? SelectTime { get; set; }
+        
     }
 }

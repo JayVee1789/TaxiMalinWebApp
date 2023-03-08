@@ -3,15 +3,6 @@ using System.ComponentModel.DataAnnotations;
 
 namespace TaxiMalinWebApp.Models
 {
-    public enum HeurePourForm
-    {
-        Une,
-        Deux,
-        Trois,
-        Quatre
-
-
-    }
     public class Reservation
     {
         public Guid Id { get; set; }
