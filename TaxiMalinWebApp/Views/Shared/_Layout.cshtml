@@ -28,7 +28,7 @@
     <link rel="icon" type="image/png" sizes="16x16" href="~/images/favicon/favicon-16x16.png" asp-append-version="true" />
   @*  <link rel="manifest" href="~/images/favicon/manifest.json">*@
     <meta name="msapplication-TileColor" content="#ffffff">
-    <meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
+   @* <meta name="msapplication-TileImage" content="/ms-icon-144x144.png">*@
     <meta name="theme-color" content="#ffffff">
     <link rel="stylesheet" href="~/css/style.css" asp-append-version="true">
     <link rel="stylesheet" href="~/css/responsive.css" asp-append-version="true">
@@ -70,38 +70,23 @@
                 <!-- Collect the nav links, forms, and other content for toggling -->
                 <div class="main-navigation" id="main-nav-bar">
                     <ul class="navigation-box">
-                        <li class=" current ">
-                            <a asp-controller="home" asp-action="index">Home</a>
-                        </li>
-
-                        <li >
-                            <a asp-controller="home" asp-action="Services">Service</a>
-                        </li>
-                        <li>
-                            <a asp-controller="home" asp-action="Apropos">A propos</a>
-                        </li>
+                        <li class=" current "><a asp-controller="home" asp-action="index">Home</a></li>
+                        <li><a asp-controller="home" asp-action="Services">Service</a></li>
+                        <li><a asp-controller="home" asp-action="Apropos">A propos</a></li>
                         <li><a asp-controller="home" asp-action="ReserverCourse">Reserver</a></li>
                         <li><a asp-controller="home" asp-action="Contact">Contact</a></li>
-                        <li>
-                            <a asp-controller="home" asp-action="Faq">F.A.Q</a>
-                        </li>
-                      
-                        
-                    </ul>
+                        <li><a asp-controller="home" asp-action="Faq">F.A.Q</a></li>
+                     </ul>
                 </div><!-- /.navbar-collapse -->
                 <div class="right-side-box">
                     <a href="callto:+330613542724" class="contact-btn-block">
-                        <span class="icon-block">
-
-                            <i class="fa fa-phone-square"></i>
-                        </span>
+                        <span class="icon-block"><i class="fa fa-phone-square"></i></span>
                         <span class="text-block">
                             06-13-54-27-24
                         </span>
                     </a>
                 </div><!-- /.right-side-box -->
-            </div>
-            <!-- /.container -->
+            </div><!-- /.container -->
         </nav>
     </header><!-- /.site-header header-one -->
     <div>
