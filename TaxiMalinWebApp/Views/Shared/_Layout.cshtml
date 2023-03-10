@@ -24,7 +24,9 @@
     @*ICONE WINDOWS*@
     <meta name="msapplication-TileColor" content="#ffffff">
     <meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
+    @*<meta name="google-site-verification" content="DN3PsHaAPDaY9rwKVLKM1l4iAtgbAXIuiV4_KK3TBgQ" />*@
     <meta name="theme-color" content="#ffffff">
+    <meta name="description" content="Navette Essonne direction aéroport, gares et point touristique : Orly, Charles de Gaulle, Beauvais, Massy Palaiseau, Evry, Etampes, Arpajon, Bretigny, sainte genevieve des bois" />
     <link rel="stylesheet" href="~/css/style.css" asp-append-version="true">
     <link rel="stylesheet" href="~/css/responsive.css" asp-append-version="true">
     <script src="https://kit.fontawesome.com/d82596a3e1.js" crossorigin="anonymous" asp-append-version="true"></script>
@@ -36,7 +38,7 @@
             <div class="container">
                 <div class="inner-container">
                     <div class="logo-block">
-                        <a asp-controller="home" asp-action="index"><img src="~/images/resources/taximalinGD.png" alt="Awesome Image" style="height:150px;width:162px" /></a>
+                        <a asp-controller="home" asp-action="index"><img src="~/images/resources/malinDegrade.png" alt="Awesome Image" style="height:150px;width:162px" /></a>
                         </div><!-- /.logo-block -->
 
                     <div class="right-block">
@@ -69,6 +71,19 @@
                         <li><a asp-controller="home" asp-action="ReserverCourse">Reserver</a></li>
                         <li><a asp-controller="home" asp-action="Contact">Contact</a></li>
                         <li><a asp-controller="home" asp-action="Faq">F.A.Q</a></li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Zone Geographique</a>
+                            <div class="dropdown-menu sub-menu">
+                                <h1 style="font-size:1em;"><a class="dropdown-item" href="#" style="color:grey;text-decoration:none">Arpajon</a></h1>
+                                <h1 style="font-size:1em;"><a class="dropdown-item" href="#" style="color:grey;text-decoration:none">Bretigny-sur-Orge</a></h1>
+                                <h1 style="font-size:1em;"><a class="dropdown-item" href="#" style="color:grey;text-decoration:none">Corbeil-Essonne</a></h1>
+                                <h1 style="font-size:1em;"><a class="dropdown-item" href="#" style="color:grey;text-decoration:none">Etampes</a></h1>
+                                <h1 style="font-size:1em;"><a class="dropdown-item" href="#" style="color:grey;text-decoration:none">Evry</a></h1>
+                                <h1 style="font-size:1em;"><a class="dropdown-item" href="#" style="color:grey;text-decoration:none">Ris-Orangis</a></h1>
+                                <h1 style="font-size:1em;"><a class="dropdown-item" href="#" style="color:grey;text-decoration:none">Sainte-Genevieve-des-Bois</a></h1>
+                                <h1 style="font-size:1em;"><a class="dropdown-item" href="#" style="color:grey;text-decoration:none">Savigny sur Orge</a></h1>
+                            </div>
+                        </li>
                      </ul>
                 </div><!-- /.navbar-collapse -->
                 <div class="right-side-box">
@@ -83,12 +98,20 @@
         </nav>
     </header><!-- /.site-header header-one -->
     <div>
-        <main role="main" class="pb-3">
-            @RenderBody()
-        </main>
+        
+            <main role="main" class="pb-3">
+                @RenderBody()
+            </main>
+       
+           
+       
+      
     </div>
-    <footer class="site-footer ">
-        <a href="#" data-target="html" class="scroll-to-target scroll-to-top"><i class="fa fa-angle-up"></i></a>
+
+    <footer class="site-footer footer ">
+
+       
+        
         <img src="~/images/background/daniel-monteiro-47VpDiZzzEQ-unsplash.jpg" style="width:657px;height:663px" class="footer-bg" alt="Awesome Image" />
         <div class="upper-footer">
             <div class="container">
@@ -113,7 +136,6 @@
                             <ul class="link-lists">
                                 <li><a asp-controller="home" asp-action="index">A propos</a></li>
                                 <li><a asp-controller="home" asp-action="ReserverCourse">Reserver un taxi</a></li>
-                                
                                 <li><a asp-controller="home" asp-action="Contact">Contact</a></li>
                             </ul>
                         </div><!-- /.footer-widget -->
@@ -145,7 +167,7 @@
                 </div><!-- /.row -->
             </div><!-- /.container -->
         </div><!-- /.upper-footer -->
-        <div class="bottom-footer">
+        <div class="bottom-footer ">
             <div class="container">
                 <div class="inner-container">
                     <div class="left-block">
@@ -161,9 +183,11 @@
                 </div><!-- /.inner-container -->
             </div><!-- /.container -->
         </div><!-- /.bottom-footer -->
+        <a href="#" data-target="html" class="scroll-to-target scroll-to-top"><i class="fa fa-angle-up"></i></a>
     </footer><!-- /.site-footer -->
     <script src="~/lib/jquery/dist/jquery.min.js" asp-append-version="true"></script>
     <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js" asp-append-version="true"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.js" asp-append-version="true"></script>
     <script src="~/js/site.js" asp-append-version="true"></script>
     <script src="~/js/jquery.js" asp-append-version="true"></script>
     <script src="~/js/bootstrap.bundle.min.js" asp-append-version="true"></script>

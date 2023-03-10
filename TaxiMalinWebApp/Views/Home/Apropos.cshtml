@@ -4,12 +4,14 @@
 @{
     ViewData["Title"] = "A propos";
 }
+
 <section class="inner-banner">
     <div class="container">
-        <ul class="thm-breadcrumb">
+        @*<ul class="thm-breadcrumb">
 
-            <li><span class="page-title">Qui sommes nous ? </span></li>
-        </ul><!-- /.thm-breadcrumb -->
+            <li><span class="page-title"><h1>A propos</h1> </span></li>
+        </ul><!-- /.thm-breadcrumb -->*@
+        <H1>A propos</H1>
         <h2>A propos</h2>
     </div><!-- /.container -->
 </section><!-- /.inner-banner -->
@@ -20,21 +22,19 @@
                 <div class="content-block">
                     <div class="block-title">
                         <div class="dot-line"></div><!-- /.dot-line -->
-                        <p>Quelque mots à propos de taxi malin</p>
+                        <p>Quelques mots à propos de taxi malin</p>
                         <h2> Decouvrez  <br /> Taxi Malin</h2>
                     </div><!-- /.block-title text-center -->
                     <p>
-                        Bienvenue sur la <b>page officielle de www.taximalin.fr</b>, la compagnie de transport de choix pour tous vos besoins de déplacement à partir de l'<b>Essonne</b>.
-                        Originaire de l’Essonne notre compagnie est spécialisée dans le transport des passagers à des tarifs fixes abordables.
+                        Bienvenue sur la <b>page officielle de www.taximalin.fr</b>, la compagnie de transport de choix pour tous vos besoins en déplacement à partir de l'<b>Essonne</b>.
+                        Originaire de l’Essonne notre compagnie est spécialisée dans le transport des passagers à tarifs fixes abordables.
                         <br />
-                        Nous offrons des <b>
-                            courses régulières
-                        </b> au départ de : Brétigny-sur-Orge, Sainte-Geneviève-des-Bois, Evry, Corbeil-Essonnes, Massy-Palaiseau et Étampes, en direction de toutes les
-                        gares grandes lignes et aéroports d'Île-de-France.
+                        Nous offrons des <b>courses régulières</b> au départ de : <b>Brétigny-sur-Orge</b>, <b>Sainte-Geneviève-des-Bois</b>,<b>Evry</b> , <b>Corbeil-Essonnes</b>, <b>Massy-Palaiseau</b> et <b>Étampes</b>, en direction de toutes les
+                        <b>gares grandes lignes Parisiennes</b> et <b>aéroports d'Île-de-France</b>.
                         <br />
-                        Nous sommes convaincus que nous offrons les <b>tarifs les plus compétitifs</b> pour tous les déplacements dans la région de l'<b>Essonne</b>.
+                        Nous sommes convaincus que nous offrons les <b>tarifs les plus compétitifs</b> pour tous vos déplacements dans la région de l'<b>Essonne</b>.
                         Si vous cherchez une compagnie de transport <b>fiable</b> et <b>professionnelle</b> en <b>Essonne</b>, alors www.taximalin.fr est le choix idéal pour vous.
-                        Contactez-nous dès maintenant pour <b>réserver</b> votre navette <b>pas chère</b> ou votre chauffeur privé Essonne. Nous sommes impatients de vous servir !
+                        Contactez-nous dès maintenant pour <b>réserver</b> votre navette <b>pas chère</b> ou votre chauffeur privé dans l'Essonne. Nous sommes impatients de vous servir !
                     </p>
                     <a asp-controller="home" asp-action="AddReservation" class="about-btn">Reserver</a>
                 </div><!-- /.content-block -->
@@ -92,13 +92,13 @@
         </div><!-- /.brand-carousel-one -->
     </div><!-- /.container -->
 </div><!-- /.brand-carousel-wrapper -->
-<section class="feature-style-one thm-black-bg">
-    <img src="images/background/feature-bg-1-1.png" alt="Awesome Image" class="feature-bg" />
+<section class="feature-style-two thm-black-bg">
+    <img src="images/background/pexels-djamel-ramdani-13026700.jpg" alt="Awesome Image" class="feature-bg" />
     <div class="container">
         <div class="block-title text-center">
             <div class="dot-line"></div><!-- /.dot-line -->
-            <p>Avantages Taxi Malin</p>
-            <h2 class="light">Pourquoi nous choisir</h2>
+            <p>Pourquoi nous choisir : </p>
+            <h2 class="light">Comment ca marche ? </h2>
         </div><!-- /.block-title text-center -->
         <div class="row">
             <div class="col-lg-4">
@@ -107,7 +107,7 @@
                         <i class="fa fa-phone"></i>
                     </div><!-- /.icon-block -->
                     <h3><a href="#">Reservation Simple</a></h3>
-                    <p>Formulaire internet ou par telephone<br /> confirmation par un agent</p>
+                    <p>Par formulaire sur internet ou par telephone<br /> </p>
 
                 </div><!-- /.single-feature-one -->
             </div><!-- /.col-lg-4 -->
@@ -117,7 +117,7 @@
                         <i class="fa-solid fa-user"></i>
                     </div><!-- /.icon-block -->
                     <h3><a href="#">Confirmation par retour d appel</a></h3>
-                    <p>Recevez une confirmation par un de nos agents dans les 4h par telephones</p>
+                    <p>Recevez une confirmation dans les 4h par telephones</p>
                     @*<a href="#" class="more-link">Read More</a>*@
                 </div><!-- /.single-feature-one -->
             </div><!-- /.col-lg-4 -->
@@ -127,14 +127,15 @@
                         <i class="fa-solid fa-user-tie"></i>
                     </div><!-- /.icon-block -->
                     <h3><a href="#">Chauffeur professionnel</a></h3>
-                    <p>Ponctualite <br> Professionalsime <br> Politesse.</p>
+                    <p>Ponctualite. Professionalsime. Politesse.</p>
 
                 </div><!-- /.single-feature-one -->
             </div><!-- /.col-lg-4 -->
         </div><!-- /.row -->
     </div><!-- /.container -->
 </section><!-- /.feature-style-one -->
-<section class="cta-style-one text-center">
+<hr class="style-one" />
+<section class="cta-style-two no-zigzag">
     <div class="container">
         <p>Service 7 / 7 jours </p>
         <h3>Appeller maintenant et reserver <br> votre prochain trajet</h3>

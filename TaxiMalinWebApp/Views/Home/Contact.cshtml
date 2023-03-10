@@ -2,16 +2,19 @@
     For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
 *@
 @{
+     ViewData["Title"] = "Contact";
 }
 @model TaxiMalinWebApp.Models.ObjetPerduMessageModel
 
 <section class="inner-banner">
     <div class="container">
-        <ul class="thm-breadcrumb">
+       @* <ul class="thm-breadcrumb">
           
             <li><span class="page-title">Nous joindre ? </span></li>
-        </ul><!-- /.thm-breadcrumb -->
+        </ul><!-- /.thm-breadcrumb -->*@
+        <h1>Contact</h1>
         <h2>Contact</h2>
+        
     </div><!-- /.container -->
 </section><!-- /.inner-banner -->
 <div class="contact-page-map-wrapper">
@@ -71,5 +74,6 @@
         </form><!-- /.contact-form-one -->
     </div><!-- /.container -->
 </section><!-- /.contact-form-style-one -->
+
 <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAuYIB-zZOGZWLcNjDG3_AjwNTUQiQ0RO0" asp-append-version="true"></script>
 <script src="~/js/map-helper.js" asp-append-version="true"></script>

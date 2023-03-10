@@ -13,7 +13,7 @@
                         <div class="banner-circle" style="background-image: url(images/slider/slider-2-1.jpg);">
                             <div class="inner-block">
 
-                                <h3> Navette pour aeroports <br>à partir <br>de 39<i class="fa-solid fa-euro-sign"></i> </h3>
+                                <h3> Navette pour aeroports <br>à partir <br>de 39 <i class="fa-solid fa-euro-sign"></i>* </h3>
                                 <a asp-controller="Home" asp-action="ReserverCourse" class="banner-btn">Reserver </a>
                             </div><!-- /.inner-block -->
                         </div><!-- /.banner-circle -->
@@ -28,7 +28,7 @@
                         <div class="banner-circle" style="background-image: url(images/slider/slider-2-2.jpg);">
                             <div class="inner-block">
 
-                                <h3> Navette pour gares <br>à partir <br>de 39<i class="fa-solid fa-euro-sign"></i> </h3>
+                                <h3> Navette pour gares <br>à partir <br>de 39 <i class="fa-solid fa-euro-sign"></i>* </h3>
                                 <a asp-controller="Home" asp-action="ReserverCourse" class="banner-btn">Reserver </a>
                             </div><!-- /.inner-block -->
                         </div><!-- /.banner-circle -->
@@ -242,7 +242,6 @@
                             <div class="name-line">A partir de* :</div><!-- /.name-line -->
                             <div class="price-line"><i class="fa-solid fa-euro-sign"></i>89</div><!-- /.price-line -->
                         </li>
-
                     </ul><!-- /.features-list -->
                     <div class="button-block">
                         <a asp-controller="home" asp-action="ReserverCourse" class="fare-btn">Reserver</a>
@@ -267,7 +266,6 @@
                             <div class="name-line">A partir de* :</div><!-- /.name-line -->
                             <div class="price-line"><i class="fa-solid fa-euro-sign"></i>89</div><!-- /.price-line -->
                         </li>
-
                     </ul><!-- /.features-list -->
                     <div class="button-block">
                         <a asp-controller="home" asp-action="ReserverCourse" class="fare-btn">Reserver</a>
@@ -479,7 +477,46 @@
 
         </div><!-- /.content-block -->
         <div class="button-block">
-            <a href="#" class="cta-btn">Reserver Maintenant</a>
+            <a asp-controller="Home" asp-action="ReserverCourse" class="cta-btn">Reserver Maintenant</a>
         </div><!-- /.button-block -->
     </div><!-- /.container -->
 </section><!-- /.cta-style-two -->
+<section class="funfact-style-one">
+    <div class="container">
+        <div class="block-title text-center">
+            <div class="dot-line"></div><!-- /.dot-line -->
+            <p>Nos chiffres</p>
+            <h2>Laissons parler les chiffres</h2>
+        </div><!-- /.block-title text-center -->
+        <div class="row">
+            <div class="col-lg-3 col-md-6 col-sm-12">
+                <div class="single-funfact-one hvr-float-shadow">
+                    <i class="fa fa-meter"></i>
+                    <h3 class="counter">8700</h3>
+                    <p>KM parcouru</p>
+                </div><!-- /.single-funfact-one -->
+            </div><!-- /.col-lg-3 -->
+            <div class="col-lg-3 col-md-6 col-sm-12">
+                <div class="single-funfact-one hvr-float-shadow">
+
+                    <h3 class="counter">1342</h3>
+                    <p>Personnes deposés</p>
+                </div><!-- /.single-funfact-one -->
+            </div><!-- /.col-lg-3 -->
+            <div class="col-lg-3 col-md-6 col-sm-12">
+                <div class="single-funfact-one hvr-float-shadow">
+                    <i class="conexi-icon-taxi"></i>
+                    <h3 class="counter">73</h3>
+                    <p>Objets retrouvés</p>
+                </div><!-- /.single-funfact-one -->
+            </div><!-- /.col-lg-3 -->
+            <div class="col-lg-3 col-md-6 col-sm-12">
+                <div class="single-funfact-one hvr-float-shadow">
+                    <i class="conexi-icon-happy"></i>
+                    <h3 class="counter">883</h3>
+                    <p>Clients heureux</p>
+                </div><!-- /.single-funfact-one -->
+            </div><!-- /.col-lg-3 -->
+        </div><!-- /.row -->
+    </div><!-- /.container -->
+</section><!-- /.funfact-style-one -->

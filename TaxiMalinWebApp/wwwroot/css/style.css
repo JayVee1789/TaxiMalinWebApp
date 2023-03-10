@@ -1153,8 +1153,9 @@ hr.style-one {
 * 6. footer styles
 */
 .site-footer {
-  position: relative;
+  position: relative ;
   background-color: #111111;
+
 }
 .site-footer:before, .site-footer:after {
   content: '';
@@ -1413,7 +1414,7 @@ hr.style-one {
   background-color: #FFC000;
   position: relative;
   padding-top: 120px;
-  padding-bottom: 158px;
+  padding-bottom:auto;
 }
 .cta-style-two .container {
   display: -moz-flex;
