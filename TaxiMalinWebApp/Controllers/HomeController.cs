@@ -53,7 +53,7 @@ namespace TaxiMalinWebApp.Controllers
                 //creation email
                 var email = new MimeMessage();
                 email.From.Add(MailboxAddress.Parse("j.veret@hotmail.fr"));
-                email.To.Add(MailboxAddress.Parse("mfshack0@gmail.com"));
+                email.To.Add(MailboxAddress.Parse("taximalin91@gmail.com"));
                 email.Subject = String.Format("Reservation");
                 email.Body = new TextPart(TextFormat.Plain) { Text = String.Format("reservation recu de {0} pour le {1} a {2},  a venir chercher a {3} et a emmener a {4} pour {5} personnes, a confirmer avec aux {6} ou par courriel aux {7}", formulaireModel.Name, formulaireModel.DateReservation, formulaireModel.SelectTime, formulaireModel.AdresseDepart, formulaireModel.AdresseDestination, formulaireModel.NbrePassager.ToString(), formulaireModel.NumeroTelephone, formulaireModel.Email) };
                 // send email
@@ -64,6 +64,7 @@ namespace TaxiMalinWebApp.Controllers
                 smtp.Disconnect(true);
 
                 //_context.SaveChanges();
+                ModelState.Clear();
                 return  RedirectToAction("ReservationAjouter");
             }
             return RedirectToAction("Index");

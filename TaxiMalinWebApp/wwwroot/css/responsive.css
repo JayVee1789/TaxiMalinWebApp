@@ -576,7 +576,7 @@
     }
 
     .site-footer .upper-footer {
-        padding-bottom: 70px;
+      /*  padding-bottom: 70px;*/
     }
 
     .site-header.header-two .top-bar .inner-container {

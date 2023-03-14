@@ -14,7 +14,7 @@
                             <div class="inner-block">
 
                                 <h3> Navette pour aeroports <br>à partir <br>de 39 <i class="fa-solid fa-euro-sign"></i>* </h3>
-                                <a asp-controller="Home" asp-action="ReserverCourse" class="banner-btn">Reserver </a>
+                                <a asp-controller="Home" asp-action="ReserverCourse" class="banner-btn">Réserver </a>
                             </div><!-- /.inner-block -->
                         </div><!-- /.banner-circle -->
                     </div><!-- /.col-lg-12 -->
@@ -29,7 +29,7 @@
                             <div class="inner-block">
 
                                 <h3> Navette pour gares <br>à partir <br>de 39 <i class="fa-solid fa-euro-sign"></i>* </h3>
-                                <a asp-controller="Home" asp-action="ReserverCourse" class="banner-btn">Reserver </a>
+                                <a asp-controller="Home" asp-action="ReserverCourse" class="banner-btn">Réserver </a>
                             </div><!-- /.inner-block -->
                         </div><!-- /.banner-circle -->
                     </div><!-- /.col-lg-12 -->
@@ -50,11 +50,11 @@
             </div><!-- /.image-block -->
             <div class="block-title">
                 <div class="dot-line"></div><!-- /.dot-line -->
-                <p>Nous sommes la meilleurs solution</p>
-                <h2>Pour tout vos <br> trajet en <br> Essonne </h2>
+                <p>Nous sommes la <b>meilleur</b> solution pour tout</p>
+                <h2>vos deplacements <br>  depuis <br> l'Essonne </h2>
             </div><!-- /.block-title -->
             <p>
-                Besoin d'un taxi fiable et abordable ? Optez pour Taxi Malin ! Nous proposons des tarifs fixes avantageux sur toutes les courses, avec des chauffeurs disponibles 24h/24 et 7j/7.
+                Besoin d'un taxi fiable et abordable ? Optez pour Taxi Malin ! Nous proposons des tarifs fixes avantageux sur toutes nos courses, avec des chauffeurs disponibles 24h/24 et 7j/7.
                 Si nos chauffeurs ne sont pas disponibles, nos partenaires prennent la course au même prix. Voyagez en toute sérénité avec Taxi Malin !
             </p>
             <hr class="style-one" />
@@ -71,52 +71,56 @@
                 <div class="block-title">
                     <div class="dot-line"></div><!-- /.dot-line -->
                     <p class="light-2">Besoin d'un chauffeurs?</p>
-                    <h2 class="light">Reserver <br> maintenant</h2>
+                    <h2 class="light">Réserver <br> maintenant</h2>
                 </div><!-- /.block-title -->
                 <form asp-controller="Home" asp-action="AddReservation" method="post" class="booking-form-one" asp-antiforgery="true">
                     <div asp-validation-summary="All" class="text-white bg-danger"></div>
                     <div class="row">
                         <div class="col-lg-6">
                             <div class="input-holder">
-                                <input asp-for="Name" type="text" placeholder="Votre nom">
+                                <input asp-for="Name" type="text" placeholder="Votre nom" required>
+                                <span asp-validation-for="Name" class="text-danger"></span>
                             </div><!-- /.input-holder -->
                         </div><!-- /.col-lg-6 -->
                         <div class="col-lg-6">
                             <div class="input-holder">
-                                <input asp-for="Email" type="email" placeholder="Courriel">
+                                <input asp-for="Email" type="email" placeholder="Courriel" required>
                                 <span asp-validation-for="Email" class="text-danger"></span>
+
                             </div><!-- /.input-holder -->
                         </div><!-- /.col-lg-6 -->
                         <div class="col-lg-12">
                             <div class="input-holder">
-                                <input asp-for="NumeroTelephone" type="text" placeholder="Telephone">
+                                <input asp-for="NumeroTelephone" type="text" placeholder="Telephone" required>
                             </div><!-- /.input-holder -->
                         </div><!-- /.col-lg-6 -->
                         <div class="col-lg-12">
                             <div class="input-holder">
-                                <input asp-for="NbrePassager" type="text" placeholder="Passagers 1-3 max" min="1" max="3">
-                                <span asp-validation-for="Email" class="text-danger"></span>
+                                <input asp-for="NbrePassager" type="text" placeholder="Passagers 1-4 max" min="1" max="4" >
+                                <span asp-validation-for="NbrePassager" class="text-danger"></span>
                             </div><!-- /.input-holder -->
                         </div><!-- /.col-lg-12 -->
                         <div class="col-lg-12">
                             <div class="input-holder">
-                                <input asp-for="AdresseDepart" type="text" placeholder="Adresse de depart">
+                                <input asp-for="AdresseDepart" type="text" placeholder="Adresse de depart"required>
+                                <span asp-validation-for="AdresseDepart" class="text-danger"></span>
                             </div><!-- /.input-holder -->
                         </div><!-- /.col-lg-12 -->
                         <div class="col-lg-12">
                             <div class="input-holder">
-                                <input asp-for="AdresseDestination" type="text" placeholder="Adresse arrivé">
+                                <input asp-for="AdresseDestination" type="text" placeholder="Adresse arrivé" required>
+                                <span asp-validation-for="AdresseDestination" class="text-danger"></span>
                             </div><!-- /.input-holder -->
                         </div><!-- /.col-lg-12 -->
                         <div class="col-lg-6">
                             <div class="input-holder">
-                                <input asp-for="DateReservation" type="date" placeholder="Selectionner une date">
+                                <input asp-for="DateReservation" type="date" placeholder="Selectionner une date" required>
                                 <i class="fa fa-calendar"></i>
                             </div><!-- /.input-holder -->
                         </div><!-- /.col-lg-6 -->
                         <div class="col-lg-6">
                             <div class="input-holder">
-                                <input asp-for="SelectTime" type="time" placeholder="Selectionner une date">
+                                <input asp-for="SelectTime" type="time" placeholder="Selectionner une date" required>
                                 <i class="fa fa-clock"></i>
                             </div><!-- /.input-holder -->
                         </div><!-- /.col-lg-6 -->
@@ -137,7 +141,7 @@
                     <i class="fa fa-phone-alt"></i>
                 </div><!-- /.icon-block -->
                 <div class="text-block">
-                    <p>Appeler et réserver dès maintenant</p>
+                    <p>Appelez et réserver dès maintenant</p>
                     <a href="callto:8888880000">06 13 54 27 24</a>
                 </div><!-- /.text-block -->
             </div><!-- /.content-block -->
@@ -183,11 +187,12 @@
                 <div class="single-offer-one hvr-float-shadow">
                     <div class="image-block">
                         <a href="#"><i class="fa fa-link"></i></a>
-                        <img src="images/resources/Hopital2-640x480.jpg" style="width:370px;height:275px;" alt="Awesome Image" />
+                        <img src="images/resources/Hopital-Longjumeau-1.jpg" style="width:370px;height:275px;" alt="Awesome Image" />
                     </div><!-- /.image-block -->
                     <div class="text-block">
-                        <h3><a href="#">Trajet medicaux</a></h3>
-                        <p>Voyagez en toute sécurité avec notre navette conventionnée CPAM à tarif avantageux vers les hôpitaux de l'Essonne. Chauffeurs qualifiés et expérimentés pour des rendez-vous médicaux sans stress. Réservez dès maintenant.</p>
+                        <h3><a href="#">Trajet médicaux</a></h3>
+@*                        <p>Voyagez en toute sécurité avec notre navette conventionnée CPAM à tarif avantageux vers les hôpitaux de l'Essonne. Chauffeurs qualifiés et expérimentés pour des rendez-vous médicaux sans stress. Réservez dès maintenant.</p>*@
+                        <p> Nos partenaires conventionnée CPAM vous emènent à tarifs avantageux vers les hôpitaux de l'Essonne. Chauffeurs qualifiés et expérimentés pour des rendez-vous médicaux sans stress. Réservez dès maintenant.  </p>
                         <a href="#" class="more-link"></a>
                     </div><!-- /.text-block -->
                 </div><!-- /.single-offer-one -->
@@ -199,7 +204,7 @@
     <div class="container">
         <div class="block-title text-center">
             <div class="dot-line"></div><!-- /.dot-line -->
-            <p>Nos differentes courses</p>
+            <p>Un apercu de nos differentes courses</p>
             <h2>Au départ du sud de l'Essonne</h2>
         </div><!-- /.block-title -->
         <div class="row">
@@ -244,7 +249,7 @@
                         </li>
                     </ul><!-- /.features-list -->
                     <div class="button-block">
-                        <a asp-controller="home" asp-action="ReserverCourse" class="fare-btn">Reserver</a>
+                        <a asp-controller="home" asp-action="ReserverCourse" class="fare-btn">Réserver</a>
                     </div><!-- /.button-block -->
                 </div><!-- /.single-taxi-fare-one -->
             </div><!-- /.col-lg-6 -->
@@ -290,7 +295,7 @@
                         </li>
                     </ul><!-- /.features-list -->
                     <div class="button-block">
-                        <a asp-controller="home" asp-action="ReserverCourse" class="fare-btn">Reserver</a>
+                        <a asp-controller="home" asp-action="ReserverCourse" class="fare-btn">Réserver</a>
                     </div><!-- /.button-block -->
                 </div><!-- /.single-taxi-fare-one -->
             </div><!-- /.col-lg-6 -->
@@ -298,9 +303,9 @@
     </div><!-- /.container -->
     <div class="block-text text-center">
         <div class="button-block">
-                        <a asp-controller="home" asp-action="Services" class="fare-btn">Toute nos offres</a>
+                        <a asp-controller="home" asp-action="Services" class="fare-btn" style="text-decoration:none;color:yellow;">Nos offres fixes</a>
          </div><!-- /.button-block -->
-        <p>*Nos prix peuvent sensiblement varié mais vous etes toujours prévénu avant la validation ou contacter un de nos agents pour plus de details.</p>
+        <p>*Nos prix fixe varient sensiblement en fonction de votre point de départ.</p>
     </div><!-- /.block-text -->
 </section><!-- /.taxi-fare-one -->
 <hr class="style-one">
@@ -347,11 +352,11 @@
             <p class="light">Ce que nos clients pensents de nous</p>
             <h2 class="light">Commentaires</h2>
         </div><!-- /.block-title -->
-        <div class="testimonials-one-pager">
+       @* <div class="testimonials-one-pager">
             <a href="#" class="pager-item active" data-slide-index="1"><img src="images/resources/testi-1-1.jpg" alt="Awesome Image" /></a>
             <a href="#" class="pager-item" data-slide-index="2"><img src="images/resources/testi-1-2.jpg" alt="Awesome Image" /></a>
             <a href="#" class="pager-item" data-slide-index="3"><img src="images/resources/testi-1-3.jpg" alt="Awesome Image" /></a>
-        </div><!-- /.testimonials-one-pager -->
+        </div><!-- /.testimonials-one-pager -->*@
         <ul class="slider testimonials-slider-one">
             <li class="slide-item">
                 <div class="single-testimonial-one">
@@ -369,9 +374,12 @@
                 <div class="single-testimonial-one">
                     <p>Je suis ravi du prix compétitif offert par Taxi Malin. Leur excellent service de taxi ne compromet en rien la qualité, ce qui en fait un choix économique et judicieux.</p>
                     <h3>Maxime Moreau</h3>
+                    
                 </div><!-- /.single-testimonial-one -->
             </li>
+             
         </ul>
+       
     </div><!-- /.container -->
     <div class="testimonials-one-slider-btn">
         <span class="carousel-btn left-btn"><i class="fa-solid fa-arrow-left"></i></span>
@@ -491,28 +499,28 @@
         <div class="row">
             <div class="col-lg-3 col-md-6 col-sm-12">
                 <div class="single-funfact-one hvr-float-shadow">
-                    <i class="fa fa-meter"></i>
-                    <h3 class="counter">8700</h3>
+                    <i class="fa-solid fa-road"></i>
+                    <h3 class="counter">53450</h3>
                     <p>KM parcouru</p>
                 </div><!-- /.single-funfact-one -->
             </div><!-- /.col-lg-3 -->
             <div class="col-lg-3 col-md-6 col-sm-12">
                 <div class="single-funfact-one hvr-float-shadow">
-
+                    <i class="fa-solid fa-person-shelter"></i>
                     <h3 class="counter">1342</h3>
                     <p>Personnes deposés</p>
                 </div><!-- /.single-funfact-one -->
             </div><!-- /.col-lg-3 -->
             <div class="col-lg-3 col-md-6 col-sm-12">
                 <div class="single-funfact-one hvr-float-shadow">
-                    <i class="conexi-icon-taxi"></i>
+                    <i class="fa-solid fa-mobile-screen"></i>
                     <h3 class="counter">73</h3>
                     <p>Objets retrouvés</p>
                 </div><!-- /.single-funfact-one -->
             </div><!-- /.col-lg-3 -->
             <div class="col-lg-3 col-md-6 col-sm-12">
                 <div class="single-funfact-one hvr-float-shadow">
-                    <i class="conexi-icon-happy"></i>
+                    <i class="fa-solid fa-face-smile-beam"></i>
                     <h3 class="counter">883</h3>
                     <p>Clients heureux</p>
                 </div><!-- /.single-funfact-one -->

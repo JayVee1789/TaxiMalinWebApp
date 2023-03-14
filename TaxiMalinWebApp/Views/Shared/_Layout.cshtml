@@ -32,13 +32,13 @@
     <script src="https://kit.fontawesome.com/d82596a3e1.js" crossorigin="anonymous" asp-append-version="true"></script>
     <link href="font-awesome/css/all.css" rel="stylesheet" >
 </head>
-<body>
+<body >
     <header class="site-header header-two">
         <div class="top-bar">
             <div class="container">
                 <div class="inner-container">
                     <div class="logo-block">
-                        <a asp-controller="home" asp-action="index"><img src="~/images/resources/malinDegrade.png" alt="Awesome Image" style="height:150px;width:162px" ></a>
+                        <a asp-controller="home" asp-action="index"><img src="~/images/resources/taximalinGD.png" alt="Awesome Image" style="height:150px;width:162px" ></a>
                         </div><!-- /.logo-block -->
 
                     <div class="right-block">
@@ -46,8 +46,8 @@
                            
                             <li><a href="mailto:taximalin@gmail.com"><i class="fa fa-envelope"></i> taximalin@gmail.com</a></li>
                             <li class="social-block">
-                                <a href="#"><i class="fa fa-instagram"></i></a>
-                                <a href="#"><i class="fa fa-facebook"></i></a>
+                                <a href="https://www.instagram.com/taximalin91/"><i class="fa fa-instagram"></i> </a>
+                                <a href="https://www.facebook.com/people/Taxi-malin-91/100089683562065/"><i class="fa fa-facebook"></i></a>
                             </li>
                         </ul><!-- /.contact-infos -->
                     </div><!-- /.right-block -->
@@ -65,10 +65,10 @@
                 <!-- Collect the nav links, forms, and other content for toggling -->
                 <div class="main-navigation" id="main-nav-bar">
                     <ul class="navigation-box">
-                        <li class=" current "><a asp-controller="home" asp-action="index">Home</a></li>
+                        <li class=" current "><a asp-controller="home" asp-action="index">Acceuil</a></li>
                         <li><a asp-controller="home" asp-action="Services">Service</a></li>
-                        <li><a asp-controller="home" asp-action="Apropos">A propos</a></li>
-                        <li><a asp-controller="home" asp-action="ReserverCourse">Reserver</a></li>
+                        <li><a asp-controller="home" asp-action="Apropos">À propos</a></li>
+                        <li><a asp-controller="home" asp-action="ReserverCourse">Réserver</a></li>
                         <li><a asp-controller="home" asp-action="Contact">Contact</a></li>
                         <li><a asp-controller="home" asp-action="Faq">F.A.Q</a></li>
                         <li class="nav-item dropdown">
@@ -98,8 +98,8 @@
         </nav>
     </header><!-- /.site-header header-one -->
     <div>
-        
-            <main role="main" class="pb-3">
+        <!-- /class="pb-3 pose probleme dans la presentation voir si cela pose d autre pb de l enlever -->
+            <main role="main" @*class="pb-3" *@ >
                 @RenderBody()
             </main>
  
@@ -113,12 +113,12 @@
                     <div class="col-lg-3">
                         <div class="footer-widget about-widget">
                             <div class="widget-title">
-                                <h3>A propos</h3>
+                                <h3>À propos</h3>
                             </div><!-- /.widget-title -->
                             <p>Course fixe, tarif fixe, taxi malin</p>
                             <div class="social-block">
-                                <a href="#"><i class="fa fa-instagram"></i></a>
-                                <a href="#"><i class="fa fa-facebook"></i></a>
+                                <a href="https://www.instagram.com/taximalin91/"><i class="fa fa-instagram"></i></a>
+                                <a href="https://www.facebook.com/people/Taxi-malin-91/100089683562065/"><i class="fa fa-facebook"></i></a>
                             </div><!-- /.social-block -->
                         </div><!-- /.footer-widget about-widget -->
                     </div><!-- /.col-lg-3 -->
@@ -128,8 +128,8 @@
                                 <h3>Liens</h3>
                             </div><!-- /.widget-title -->
                             <ul class="link-lists">
-                                <li><a asp-controller="home" asp-action="index">A propos</a></li>
-                                <li><a asp-controller="home" asp-action="ReserverCourse">Reserver un taxi</a></li>
+                                <li><a asp-controller="home" asp-action="index">À propos</a></li>
+                                <li><a asp-controller="home" asp-action="ReserverCourse">Réserver un taxi</a></li>
                                 <li><a asp-controller="home" asp-action="Contact">Contact</a></li>
                             </ul>
                         </div><!-- /.footer-widget -->
@@ -149,9 +149,9 @@
                     <div class="col-lg-4">
                         <div class="footer-widget">
                             <div class="widget-title">
-                                <h3>Newsletter</h3>
+                                <h3>Infos Lettre</h3>
                             </div><!-- /.widget-title -->
-                            <p>Inscrivez vous à notre newsletter pour recevoir <br>  les dernieres offres de taxi malin.</p>
+                            <p>Inscrivez vous à notre infos-lettre pour recevoir <br>  les dernières offres de taxi malin.</p>
                             <form action="#" class="subscribe-form">
                                 <input type="text" name="email" placeholder="Enter your email">
                                 <button type="submit">Go</button>
@@ -192,7 +192,8 @@
     <script src="~/js/jquery.counterup.min.js" asp-append-version="true"></script>
     <script src="~/js/jquery.bxslider.min.js" asp-append-version="true"></script>
     <script src="~/js/theme.js" asp-append-version="true"></script>
-    
+    <script src="~/lib/jquery-validate/jquery.validate.js"></script>
+    <script src="~/lib/jquery-validationunobtrusive/jquery.validate.unobtrusive.js"></script>
     @await RenderSectionAsync("Scripts", required: false)
 </body>
 </html>

@@ -3,7 +3,7 @@
     ViewData["Title"] = "Reserver";
 
 }
-@model TaxiMalinWebApp.Models.Reservation
+@model TaxiMalinWebApp.ViewModels.ReservationViewModel
 <style>
     span.e-input-group-icon.e-date-icon.e-icons {
         display: none;
@@ -15,8 +15,8 @@
           
             <li><span class="page-title">Formulaire en ligne ?</span></li>
         </ul><!-- /.thm-breadcrumb -->*@
-        <h1>Reserver une course</h1> 
-        <h2>Reserver une course</h2>
+        <h1>Réserver une course</h1> 
+        <h2>Réserver une course</h2>
     </div><!-- /.container -->
 </section><!-- /.inner-banner -->
 <section class="book-ride-two">
@@ -26,10 +26,10 @@
                 <div class="block-title">
                     <div class="dot-line"></div><!-- /.dot-line -->
                     <p>Besoin d'un taxi ou d'un chauffeur ?</p>
-                    <h2>Faites votre reservation</h2>
+                    <h2>Faites votre réservation</h2>
                 </div><!-- /.block-title -->
                 <form asp-controller="Home" asp-action="AddReservation" class="booking-form-two ">
-                    <p>Obtenez une reponse rapide par un de nos agents</p>
+                    <p>Obtenez une réponse rapide par un de nos agents</p>
                     <h3 class="form-block-title">Remplissez les informations</h3><!-- /.form-block-title -->
                     <div class="row">
                         <div class="col-lg-6">
@@ -44,22 +44,22 @@
                         </div><!-- /.col-lg-6 -->
                         <div class="col-lg-6">
                             <div class="input-holder">
-                                <input asp-for="NumeroTelephone" type="text" name="NumeroTelephone" placeholder="Telephone">
+                                <input asp-for="NumeroTelephone" type="text" name="NumeroTelephone" placeholder="Téléphone">
                             </div><!-- /.input-holder -->
                         </div><!-- /.col-lg-6 -->
                         <div class="col-lg-6">
                             <div class="input-holder">
-                                <input asp-for="NbrePassager" type="text" name="NbrePassager" placeholder="Passagers 1-3 max" min="1" max="3" step="1">
+                                <input asp-for="NbrePassager" type="text" name="NbrePassager" placeholder="Passagers 1-4 max" min="1" max="4" step="1">
                             </div><!-- /.input-holder -->
                         </div><!-- /.col-lg-6 -->
                         <div class="col-lg-6">
                             <div class="input-holder">
-                                <input asp-for="AdresseDepart" type="text" name="AdresseDepart" placeholder="Adresse de depart">
+                                <input asp-for="AdresseDepart" type="text" name="AdresseDepart" placeholder="Adresse de départ">
                             </div><!-- /.input-holder -->
                         </div><!-- /.col-lg-6 -->
                         <div class="col-lg-6">
                             <div class="input-holder">
-                                <input asp-for="AdresseDestination" type="text" name="AdresseDestination" placeholder="Adresse de livraison">
+                                <input asp-for="AdresseDestination" type="text" name="AdresseDestination" placeholder="destination">
                             </div><!-- /.input-holder -->
                         </div><!-- /.col-lg-6 -->
                         <div class="col-lg-6">
@@ -83,7 +83,7 @@
                             </span>En cochant vous accepter nos termes et conditions.
                         </li>
                     </ul>*@
-                    <button type="submit" class="book-btn">Reserver</button>
+                    <button type="submit" class="book-btn">Réserver</button>
                 </form><!-- /.booking-form-two -->
             </div><!-- /.col-lg-8 -->
         </div><!-- /.row -->
@@ -92,8 +92,8 @@
 <section class="cta-style-one text-center">
     <div class="container">
         <h1>OU</h1>
-        <h3>Appeller maintenant et reserver <br> votre prochain trajet</h3>
-        <p>Service 7 / 7 jours </p>
+        <h3>Appelez et reserver <br> par téléphone </h3>
+      
         <a callto="0613542724" class="cta-btn">06-13-54-27-24</a>
     </div><!-- /.container -->
 </section><!-- /.cta-style-one -->
