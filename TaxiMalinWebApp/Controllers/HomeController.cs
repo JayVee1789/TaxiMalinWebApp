@@ -64,7 +64,7 @@ namespace TaxiMalinWebApp.Controllers
                 smtp.Disconnect(true);
 
                 //_context.SaveChanges();
-                ModelState.Clear();
+               // ModelState.Clear();
                 return  RedirectToAction("ReservationAjouter");
             }
             return RedirectToAction("Index");
