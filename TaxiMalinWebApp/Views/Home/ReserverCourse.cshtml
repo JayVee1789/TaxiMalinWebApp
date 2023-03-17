@@ -1,9 +1,9 @@
 ﻿
 @{
-    ViewData["Title"] = "Reserver";
+    ViewData["Title"] = "Reserver une course depuis l'Essonne";
 
 }
-@model TaxiMalinWebApp.ViewModels.ReservationViewModel
+@model TaxiMalinWebApp.Models.Reservation
 <style>
     span.e-input-group-icon.e-date-icon.e-icons {
         display: none;
@@ -11,10 +11,6 @@
 </style>
 <section class="inner-banner">
     <div class="container">
-       @* <ul class="thm-breadcrumb">
-          
-            <li><span class="page-title">Formulaire en ligne ?</span></li>
-        </ul><!-- /.thm-breadcrumb -->*@
         <h1>Réserver une course</h1> 
         <h2>Réserver une course</h2>
     </div><!-- /.container -->
@@ -76,13 +72,6 @@
                             </div><!-- /.input-holder -->
                         </div><!-- /.col-lg-6 -->
                     </div><!-- /.row -->
-                     @*<ul class="special-checkbox">
-                        <li>
-                            <span class="input-checker">
-                                    <input asp-for="AgreementIsChecked" type="checkbox" value="">
-                            </span>En cochant vous accepter nos termes et conditions.
-                        </li>
-                    </ul>*@
                     <button type="submit" class="book-btn">Réserver</button>
                 </form><!-- /.booking-form-two -->
             </div><!-- /.col-lg-8 -->
