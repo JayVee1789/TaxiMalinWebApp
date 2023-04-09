@@ -1,0 +1,7 @@
+User-agent: *
+Disallow: /admin/
+Disallow: /contact-us/
+Disallow: /terms-and-conditions/
+Disallow: /privacy-policy/
+
+Sitemap: https://www.taximalin.fr/sitemap.xml
